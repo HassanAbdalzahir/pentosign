@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: arial;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+header nav{
+    background-color: #082032;
+    color: #eee;
+    height: 50px;
+    user-select: none;
+}
+header nav .logo{
+    float: left;
+    width: 150px;
+}
+header nav .logo img{
+    width: 100%;
+    margin: 5px 5px;
+    user-select: none;
+}
+header nav .links{
+    float: right;
+}
+header nav .links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 15px 5px;
+    transition: all .1s;
+    cursor: pointer;
+}
+header nav .links ul li:hover{
+    color: coral;
+}
+header nav .sign{
+    float: left;
+    margin: 10px 80px;
+}
+
+header nav .sign span{
+    display: inline-block;
+    margin-right: 10px; 
+    cursor: pointer;
+    user-select: none;
+}
+header nav .sign .sign-up{
+    background-color: coral;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .1s;
+}
+header nav .sign .sign-up:active{
+    border: solid 1px coral;
+    padding: 4px 9px;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 238, 0);
+}
+header nav .sign .sign-in{
+    border: solid 1px coral;
+    padding: 5px 10px;
+    transition: all .1s;
+    border-radius: 10px;
+}
+header nav .sign .sign-in:active{
+    background-color: coral;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+header nav .sign::after{
+    clear: both;
+}

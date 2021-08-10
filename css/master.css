@@ -1,3 +1,15 @@
+/*
+    @media screen and (max-width: 767px){}
+    @media screen and (min-width: 768px){}
+    @media screen and (min-width: 992px){}
+    @media screen and (min-width: 1200px){}
+*/
+
+:root{
+    --first-color: #342059;
+    --second-color: #ffed00;
+    --third-color: #1d1d1b;
+}
 *{
     padding: 0;
     margin: 0;
@@ -6,73 +18,95 @@
 body{
     font-family: arial;
 }
-.container{
-    width: 1000px;
-    margin: auto;
-    padding: 0 10px;
-}
-header nav{
-    background-color: #082032;
-    color: #eee;
-    height: 50px;
-    user-select: none;
-}
-header nav .logo{
-    float: left;
-    width: 150px;
-}
-header nav .logo img{
-    width: 100%;
-    margin: 5px 5px;
-    user-select: none;
-}
-header nav .links{
-    float: right;
-}
-header nav .links ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 15px 5px;
-    transition: all .1s;
-    cursor: pointer;
-}
-header nav .links ul li:hover{
-    color: coral;
-}
-header nav .sign{
-    float: left;
-    margin: 10px 80px;
-}
-
-header nav .sign span{
-    display: inline-block;
-    margin-right: 10px; 
-    cursor: pointer;
-    user-select: none;
-}
-header nav .sign .sign-up{
-    background-color: coral;
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: all .1s;
-}
-header nav .sign .sign-up:active{
-    border: solid 1px coral;
-    padding: 4px 9px;
-    border-radius: 10px;
-    background-color: rgba(238, 238, 238, 0);
-}
-header nav .sign .sign-in{
-    border: solid 1px coral;
-    padding: 5px 10px;
-    transition: all .1s;
-    border-radius: 10px;
-}
-header nav .sign .sign-in:active{
-    background-color: coral;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-header nav .sign::after{
+.clear{
     clear: both;
 }
+img{
+    width: 100%;
+}
+/* Container: */
+@media screen and (max-width: 767px){
+    .container{
+        margin: auto;
+    }
+}
+@media screen and (min-width: 768px){
+    .container{
+        margin: auto;
+        width: 750px;
+        padding: 5px;
+    }
+
+}
+@media screen and (min-width: 992px){
+    .container{
+        width: 950px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .container{
+        width: 1150px;
+    }
+} /* Container; */
+
+/* Header: */
+@media screen and (max-width: 767px){}
+@media screen and (min-width: 768px){
+    header nav{
+        background-color: var(--first-color);
+    }
+    header nav .logo{
+        float: left;
+        width: 200px;
+    }
+    header nav .links ul li{
+        list-style: none;
+        display: inline-block;
+        color: #eee;
+        padding: 0 2px;
+        font-size: .9rem;
+        transition: all .12s;
+        cursor: pointer;
+    }
+    header nav .links ul li:hover{
+        color: var(--second-color);
+    }
+    header nav .links {
+        float: right;
+        position: relative;
+        top: 17px;
+    }
+    header nav .sign{
+        position: relative;
+        float: left;
+        padding: 0 2px;
+        top: 10px;
+        left: 15px;
+        color: #eee;
+    }
+    header nav .sign span{
+        display: inline-block;
+        background-color: var(--second-color);
+        color: var(--third-color);
+        padding: 8px;
+        width: 80px;
+        text-align: center;
+        border-radius: 25px;
+        border: solid 1px var(--second-color);
+        cursor: pointer;
+    }
+    header nav .sign .sign-up:active{
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+    }
+    header nav .sign .sign-in{
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+    }
+    header nav .sign .sign-in:active{
+        background-color: var(--second-color);
+        color: var(--third-color);
+    }
+}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){} /* Header; */

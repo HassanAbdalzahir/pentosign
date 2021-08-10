@@ -28,6 +28,7 @@ img{
 @media screen and (max-width: 767px){
     .container{
         margin: auto;
+        width: 95%;
     }
 }
 @media screen and (min-width: 768px){
@@ -50,10 +51,74 @@ img{
 } /* Container; */
 
 /* Header: */
-@media screen and (max-width: 767px){}
+@media screen and (max-width: 767px){
+    header nav {
+        background-color: var(--first-color);
+        text-align: center;
+
+        padding-bottom: 10px;
+    }
+    header nav .logo img{
+        width: 80%;
+        margin-top: 30px;
+    }
+    header nav .swap-button{
+        display: block;
+        font-size: 3rem;
+        color: #eee;
+        transition: all .3s;
+    }
+    header nav .swap-button:active{
+        transform: rotate(180deg);
+    }
+    header nav .links{
+        color: #eee;
+        font-size: 2rem;
+        transition: all .5s;
+        position: relative;
+        top: -999px;
+   
+    }
+    header nav .links.clicked{
+        top: 0px;
+    }
+    header nav .links ul li{
+        list-style: none;
+    }
+    header nav .links ul li:active{
+        color: var(--second-color);
+    }
+    
+    header nav .sign span{
+        display: inline-block;
+        background-color: var(--second-color);
+        color: var(--third-color);
+        padding: 8px;
+        width: 80px;
+        text-align: center;
+        border-radius: 25px;
+        border: solid 1px var(--second-color);
+        cursor: pointer;
+        transition: all .1s;
+        user-select: none;
+    }
+    header nav .sign .sign-up:active{
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+    }
+    header nav .sign .sign-in{
+        background-color: rgba(0, 0, 0, 0);
+        color: #eee;
+    }
+}
 @media screen and (min-width: 768px){
     header nav{
         background-color: var(--first-color);
+    }
+    header nav .swap-button{
+        position:absolute;
+        top: -999px;
+        right: -999px;
     }
     header nav .logo{
         float: left;
@@ -94,6 +159,8 @@ img{
         border-radius: 25px;
         border: solid 1px var(--second-color);
         cursor: pointer;
+        transition: all .1s;
+        user-select: none;
     }
     header nav .sign .sign-up:active{
         background-color: rgba(0, 0, 0, 0);
@@ -103,10 +170,16 @@ img{
         background-color: rgba(0, 0, 0, 0);
         color: #eee;
     }
-    header nav .sign .sign-in:active{
-        background-color: var(--second-color);
-        color: var(--third-color);
+}
+@media screen and (min-width: 992px){
+    header nav .links ul li{
+        font-size: 1.1rem;
+    }
+    header nav .sign{
+        left:90px;
+    }
+    header nav .sign span{
+        margin-right: 20px;
     }
 }
-@media screen and (min-width: 992px){}
 @media screen and (min-width: 1200px){} /* Header; */

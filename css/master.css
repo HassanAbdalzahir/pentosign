@@ -17,6 +17,7 @@
 }
 body{
     font-family: arial;
+    height: 3000px;
 }
 .clear{
     clear: both;
@@ -114,6 +115,7 @@ img{
 @media screen and (min-width: 768px){
     header nav{
         background-color: var(--first-color);
+        width: 100%;
     }
     header nav .swap-button{
         position:absolute;
@@ -182,4 +184,58 @@ img{
         margin-right: 20px;
     }
 }
-@media screen and (min-width: 1200px){} /* Header; */
+/* Header; */
+
+@media screen and (max-width: 767px){}
+@media screen and (min-width: 768px){
+    section.header {
+        background-color: var(--second-color);
+    }
+    section.header .container{
+        height: 900px;
+    }
+    section.header .container .left{
+        float: left;
+        width: 70%;
+        background-color: var(--second-color);
+        height: 100%;
+    }
+    section.header .container .right{
+        float: right;
+        width: 30%;
+        background-color: var(--first-color);
+        height: 100%;
+        color: var(--second-color);
+        padding: 15px;
+    }
+    section.header .container .right .text{
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: 10%;
+    }
+    section.header .container .right .text h2{
+        font-family: arial;
+        color: #eee;
+        letter-spacing: 5px;
+    }
+    section.header .container .right .text .parag{
+        position: relative;
+        top: 150px;
+        color: #eee;
+        font-size: 1.3rem;
+        font-family: arial, tahoma;
+    }
+    section.header .container .right .text .scroll-down{
+        position: relative;
+        top: 350px;
+        color: #eee;
+        border: 2px #eee solid;
+        border-radius: 50%;
+        padding: 15px;
+        box-shadow: 3px 3px 100px #eee,
+        inset 55px -3px 25px #000;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 992px){}
